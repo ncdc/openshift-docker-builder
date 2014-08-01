@@ -1,3 +1,3 @@
 FROM ironcladlou/fedora-dind
-
-CMD ["with_docker_service", "docker build --rm -t $BUILD_TAG $DOCKER_CONTEXT_URL"]
+ADD ./build.sh /tmp/build.sh
+CMD ["/tmp/build.sh"]
